@@ -12,8 +12,9 @@ from .views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('blog/', include('blog.urls')),
     path('', home, name='home'),
+    path('products/', include('products.urls', namespace='products')),
+
 
 ]
 

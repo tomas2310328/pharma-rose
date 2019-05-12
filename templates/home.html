@@ -13,11 +13,12 @@
                           <!-- Welcome Text -->
                           <div class="col-12 col-md-9 col-lg-6">
                               <div class="welcome-text">
-                                  <p data-animation="fadeInUp" data-delay="400ms">“Discover your own style.
-                                    Don't try to repeat what has already been written -
-                                    have the courage to do your own thing and don't
-                                    be afraid to do something different.”</p>
-                                  <a href="/" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">About Us</a>
+                                  <p data-animation="fadeInUp" data-delay="400ms">
+                                    “Welcome to Pharma-Rose,
+                                    where our utmost commitment is improving the quality of
+                                    life for each and every individual.”
+                                  </p>
+                                  <a href="/" class="btn akame-btn" data-animation="fadeInUp" data-delay="700ms">Contact Us</a>
                               </div>
                           </div>
                       </div>
@@ -57,8 +58,19 @@
               <div class="col-12">
                   <!-- Section Heading -->
                   <div class="section-heading text-center">
-                      <h2>Our Services</h2>
-                      <p>The House of Hair Salon &amp; Spa, incididunt ut labore et dolore magna aliqua.</p>
+                      <h3 class="text-center">Our Products</h3>
+                      <p class="text-center">
+                        The House of Bodybuilding &amp; bodybuilding programs, bodybuilding protein.
+                      </p>
+                      <div class="container my-5">
+                        <div class="row">
+                          {% for category in all_categories %}
+                            <div class="col-sm-2 my-3">
+                                <a style="font-weight: bold;" class="btn akame-btn" href="{% url 'products:category_product_list' category.slug %}">{{category.name}}</a>
+                            </div>
+                          {% endfor %}
+                        </div>
+                      </div>
                   </div>
               </div>
           </div>
