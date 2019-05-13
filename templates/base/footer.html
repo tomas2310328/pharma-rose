@@ -1,0 +1,59 @@
+{% load static %}
+
+<hr>
+<footer class="footer-area section-padding-80-0">
+    <div class="container">
+        <div class="row justify-content-between">
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="single-footer-widget mb-80">
+                    <!-- Footer Logo -->
+                    <a style='text-decoration:none;' class="widget-title" href="{% url 'home' %}" class="footer-logo">
+                      <img src="{% static 'img/rose.jpg' %}" width="25" height="25"> Pharma Rose
+                    </a>
+
+                    <p class="mb-30">The House of Bodybuilding Products</p>
+
+                    <!-- Copywrite Text -->
+                    <div class="copywrite-text">
+                        <p>
+                          Copyright &copy; {% now "Y" %} All rights reserved | This is made with
+                          <a href="https://www.facebook.com/totoo25">Thomas</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <div class="single-footer-widget mb-80">
+                    <!-- Social Info -->
+                    <div class="social-info">
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                        <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Footer Widget -->
+            <div class="col-12 col-md-4 col-xl-3">
+                <div class="single-footer-widget mb-80">
+
+                    <!-- Widget Title -->
+                    <h4 class="widget-title">Contact Us</h4>
+
+                    <!-- Contact Address -->
+                    <div class="contact-address">
+                        <p>Tel: (+12) 345 678 910</p>
+                        <p>E-mail: pharma.rose@gmail.com</p>
+                        <p>Address: Tiland </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>

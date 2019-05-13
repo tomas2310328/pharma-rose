@@ -31,7 +31,7 @@
                       </div>
                     {% endif %}
                     <div class="post-content">
-                        <a style='text-decoration:none;' href="#" class="post-title">{{product.name}}</a>
+                        <a style='text-decoration:none;' href="{% url 'products:product_detail' product.slug %}" class="post-title">{{product.name}}</a>
                         <p>
                           {{product.text|truncatewords:6}}
                           <a href="{% url 'products:product_detail' product.slug %}" class="btn btn-warning btn-sm" style="background: #ed790b;">Read More</a>
