@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class=" container my-5">
+  {% for query in queryset %}
+    {% if barcode == query.bar_code and serial == query.serial_number %}
+      <p class="alert alert-primary text-center">
+        Your Barcode and Serial Number
+        <i class="fas fa-check-circle"> True</i>
+      </p>
+    {% endif %}
+    {% empty %}
+      {% if barcode != query.bar_code and serial != query.serial_number %}
+        <p class="alert alert-danger text-center">
+          Your Barcode Or Serial Number
+          <i class="fas fa-times-circle"> False</i>
+        </p>
+      {% endif %}
+      {{query.bar_code}}
+  {% endfor %}
+</div>
+
+  <div class="container">
+    <h5 class="text-center my-5">Write your Barcode &amp; Serial Number To Checking</h5>
+
+      <form action="." method="get">
+
+        <div class="form-row form-inlin justify-content-center" style="margin-bottom: 100px; margin-left: 160px;">
+
+          <div class="col-sm-3 my-1">
+            <input class="form-control" type="search"
+            name="serial" placeholder="your Serial Number" required />
+          </div>
+
+          <div class="col-sm-3 my-1">
+            <input class="form-control" type="search"
+            name="code" placeholder="your Barcode Number" required />
+          </div>
+
+          <div class="col-sm-3 my-1">
+            <button class="btn akame-btn ml-2" type="submit"
+            style="height: 40px; background: #bca858;font-weight: bold;">Checking</button>
+          </div>
+
+        </div>
+      </form>
+
+  </div>
+{% endblock content %}

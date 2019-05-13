@@ -1,0 +1,155 @@
+[
+{
+    "model": "check.checking",
+    "pk": 1,
+    "fields": {
+        "bar_code": "37943",
+        "serial_number": "R37943"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 2,
+    "fields": {
+        "bar_code": "37944",
+        "serial_number": "R37944"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 3,
+    "fields": {
+        "bar_code": "37945",
+        "serial_number": "R37945"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 4,
+    "fields": {
+        "bar_code": "37946",
+        "serial_number": "R37946"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 5,
+    "fields": {
+        "bar_code": "37947",
+        "serial_number": "R37947"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 6,
+    "fields": {
+        "bar_code": "37948",
+        "serial_number": "R37948"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 7,
+    "fields": {
+        "bar_code": "37949",
+        "serial_number": "R37949"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 8,
+    "fields": {
+        "bar_code": "37950",
+        "serial_number": "R37950"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 9,
+    "fields": {
+        "bar_code": "37951",
+        "serial_number": "R37951"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 10,
+    "fields": {
+        "bar_code": "37952",
+        "serial_number": "R37952"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 11,
+    "fields": {
+        "bar_code": "37953",
+        "serial_number": "R37953"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 12,
+    "fields": {
+        "bar_code": "37954",
+        "serial_number": "R37954"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 13,
+    "fields": {
+        "bar_code": "37955",
+        "serial_number": "R37955"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 14,
+    "fields": {
+        "bar_code": "37956",
+        "serial_number": "R37956"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 15,
+    "fields": {
+        "bar_code": "37957",
+        "serial_number": "R37957"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 16,
+    "fields": {
+        "bar_code": "37958",
+        "serial_number": "R37958"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 17,
+    "fields": {
+        "bar_code": "37959",
+        "serial_number": "R37959"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 18,
+    "fields": {
+        "bar_code": "37960",
+        "serial_number": "R37960"
+    }
+},
+{
+    "model": "check.checking",
+    "pk": 19,
+    "fields": {
+        "bar_code": "37961",
+        "serial_number": "R37961"
+    }
+}
+
+]
