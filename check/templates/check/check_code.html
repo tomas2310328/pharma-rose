@@ -1,26 +1,31 @@
 {% extends "base.html" %}
+
+{% block title %}Checking Code{% endblock %}
+
 {% block content %}
 <div class=" container my-5">
   {% for query in queryset %}
     {% if barcode == query.bar_code and serial == query.serial_number %}
       <p class="alert alert-primary text-center">
         Your Barcode and Serial Number
-        <i class="fas fa-check-circle"> True</i>
+        <i class="fas fa-check-circle"></i><br>
       </p>
     {% endif %}
     {% empty %}
       {% if barcode != query.bar_code and serial != query.serial_number %}
         <p class="alert alert-danger text-center">
-          Your Barcode Or Serial Number
-          <i class="fas fa-times-circle"> False</i>
+          WARNING! Your Barcode Or Serial Number
+          <i class="fas fa-times-circle"></i><br>
+          Maybe You Do not Purchase This Product
         </p>
+
       {% endif %}
       {{query.bar_code}}
   {% endfor %}
 </div>
 
   <div class="container">
-    <h5 class="text-center my-5">Write your Barcode &amp; Serial Number To Checking</h5>
+    <h5 class="text-center my-5">Enter your Barcode &amp; Serial Number To Checking</h5>
 
       <form action="." method="get">
 

@@ -5,7 +5,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import home
+from .views import home, about
 
 
 
@@ -13,8 +13,10 @@ from .views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home, name='home'),
+    path('about-us/', about, name='about'),
     path('products/', include('products.urls', namespace='products')),
     path('check-code/', include('check.urls', namespace='check')),
+    path('contact-us/', include('contact.urls', namespace='contact')),
 
 
 ]
