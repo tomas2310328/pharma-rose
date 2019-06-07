@@ -27,7 +27,7 @@ DEBUG = True
 # DEBUG = False
 
 ALLOWED_HOSTS = []
-# ALLOWED_HOSTS = ['157.230.53.211', '.pharmarose.net']
+# ALLOWED_HOSTS = ['142.93.42.167', '.pharmarose.net']
 
 # Application definition
 

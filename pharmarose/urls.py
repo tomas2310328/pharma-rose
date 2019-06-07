@@ -11,7 +11,7 @@ from .views import home, about
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('eslam-admin/', admin.site.urls),
     path('', home, name='home'),
     path('about-us/', about, name='about'),
     path('products/', include('products.urls', namespace='products')),
