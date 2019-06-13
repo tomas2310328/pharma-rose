@@ -15,32 +15,6 @@
           </div>
         {% endfor %}
       </div>
-
-        <div class="row my-5 mx-sm-n4 akame-blog-masonary">
-          {% for product in object_list %}
-            <!-- Single Blog Item -->
-            <div class="col-12 col-sm-6 col-lg-4 px-4 akame-blog-masonary-item mb-50 wow fadeInUp" data-wow-delay="200ms">
-                <div class="single-post-area">
-                  {% if product.image %}
-                    <div class="post-thumbnail">
-                        <img style="height: 200px; width: 200px;" src="{{product.image.url}}" >
-                    </div>
-                  {% endif %}
-                    <div class="post-content">
-                        <a style='text-decoration:none;' href="{% url 'products:product_detail' product.slug %}" class="post-title">{{product.name}}</a>
-                        <p>
-                          {{product.text|truncatewords:6}}
-                          <a href="{% url 'products:product_detail' product.slug %}" class="btn btn-warning btn-sm" style="background: #ed790b;">Read More</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-          {% empty %}
-            <div class="post-content text-center">
-              <p>Sorry, No there any Products Yet!</p>
-            </div>
-          {% endfor %}
-        </div>
       </div>
 </section>
 
