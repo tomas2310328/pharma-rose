@@ -27,7 +27,7 @@ SECRET_KEY = '$c&!&tj!@m@u-mi=8jy*d%@9xf7g(mpyord58(dqv91ng05*lq'
 DEBUG = False
 
 # ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['142.93.42.167', '.pharmarose.net']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
