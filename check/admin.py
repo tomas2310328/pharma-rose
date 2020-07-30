@@ -13,6 +13,7 @@ class CheckingResource(resources.ModelResource):
         model = Checking
         fields = ('product', 'bar_code', 'serial_number',)
 
+
 class CheckingAdmin(ImportExportModelAdmin):
     resource_class = CheckingResource
     list_display = ('product', 'serial_number', 'bar_code',)
