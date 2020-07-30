@@ -7,9 +7,30 @@
   {% for query in queryset %}
     {% if barcode == query.bar_code and serial == query.serial_number %}
       <p class="alert alert-primary text-center">
-        Your Barcode and Serial Number
-        <i class="fas fa-check-circle"></i><br>
+        Your Barcode and Serial Number are Correct
       </p>
+      <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                        {% if query.product.image %}
+                            <img class="product__details__pic__item--large"
+                                src="{{query.product.image.url}}" alt="" height="400px" width="200px">
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__text">
+                        <h3>{{query.product.name}}</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
     {% endif %}
     {% empty %}
       {% if barcode != query.bar_code and serial != query.serial_number %}
@@ -43,7 +64,7 @@
 
           <div class="col-sm-3 my-1">
             <button class="btn akame-btn ml-2" type="submit"
-            style="height: 40px; background: #bca858;font-weight: bold;">Checking</button>
+            style="background: #3f2e4f; color: white; font-weight: bold;">Check</button>
           </div>
 
         </div>

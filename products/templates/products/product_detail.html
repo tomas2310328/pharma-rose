@@ -4,7 +4,33 @@
 
 {% block content %}
 
-<!-- Blog Details Area Start -->
+<section class="product-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__item">
+                    {% if object.image %}
+                        <img class="product__details__pic__item--large"
+                            src="{{object.image.url}}" alt="" height="400px" width="200px">
+                    {% endif %}
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__text">
+                    <h3>{{object.name}}</h3>
+                    <p>{{object.text}}</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+<!-- Blog Details Area Start 
 <section class="akame-blog-details-area section-padding-80">
     <div class="container">
         <div class="row justify-content-center">
@@ -33,4 +59,6 @@
                 </div>
             </div>
 </section>
+-->
+
 {% endblock %}

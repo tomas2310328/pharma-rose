@@ -6,8 +6,9 @@ from django.contrib.auth.models import User, Group
 
 
 class CheckingAdmin(admin.ModelAdmin):
-    list_display = ['serial_number', 'bar_code']
-    search_fields = ['serial_number', 'bar_code']
+    list_display = ('product', 'serial_number', 'bar_code',)
+    list_filter = ('product',)
+    search_fields = ('product',)
 
 
 

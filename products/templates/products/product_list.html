@@ -3,6 +3,53 @@
 {% block title %}Pharma-Rose | Products{% endblock %}
 
 {% block content %}
+
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-7">
+                <div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="row">
+                      {% for product in object_list %}
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                              {% if product.image %}
+                              <a href="{% url 'products:product_detail' product.slug %}">
+                                  <div class="product__discount__item__pic set-bg"
+                                      data-setbg="{{product.image.url}}">
+                                  </div>
+                                </a>
+                              {% endif %}
+
+                                <div class="product__discount__item__text">
+                                    {% if product.category %}
+                                      <span>{{product.category}}</span>
+                                    {% else %}
+                                      <span>No Category Related</span>
+                                    {% endif %}
+                                    <h5><a href="{% url 'products:product_detail' product.slug %}">{{product.name}}</a></h5>
+                                    <div class="product__item__price">
+                                    {{product.text|truncatewords:6}}...etc
+                                    <a href="{% url 'products:product_detail' product.slug %}" 
+                                    class="btn btn-warning btn-sm" style="height: 28px; background: #7ead39;">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {% empty %}
+                      <div class="post-content text-center">
+                        <p>Sorry, No there any Products Yet!</p>
+                      </div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+</section>
+
+<!-- 
 <section class="akame-news-area my-5 section-padding-0-80">
     <div class="container">
 
@@ -17,7 +64,6 @@
       </div>
     <div class="row my-5 mx-sm-n4 akame-blog-masonary">
           {% for product in object_list %}
-            <!-- Single Blog Item -->
             <div class="col-12 col-sm-6 col-lg-4 px-4 akame-blog-masonary-item mb-50 wow fadeInUp" data-wow-delay="200ms">
                 <div class="single-post-area">
                   {% if product.image %}
@@ -42,6 +88,7 @@
         </div> 
       </div>
 </section>
+News Area End -->
 
 <section>
   {% if is_paginated %}
@@ -54,5 +101,7 @@
       {% endif %}
   {% endif %}
 </section>
-<!-- News Area End -->
+
+
+
 {% endblock %}
