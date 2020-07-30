@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="breadcrumb-content">
-                    <h2>{{category.name}}</h2>
+                    <h2 style="margin-bottom: 20px; margin-top: 50px;">{{category.name}}</h2>
                 </div>
             </div>
         </div>
@@ -17,35 +17,49 @@
 </section>
 <!-- Breadcrumb Area End -->
 
-<!-- News Area Start -->
-<section class="akame-news-area section-padding-0-80">
+<section class="product spad">
     <div class="container">
-        <div class="row mx-sm-n4 akame-blog-masonary">
-          {% for product in products %}
-            <!-- Single Blog Item -->
-            <div class="col-12 col-sm-6 col-lg-4 px-4 akame-blog-masonary-item mb-50 wow fadeInUp" data-wow-delay="200ms">
-                <div class="single-post-area">
-                    {% if product.image %}
-                      <div class="post-thumbnail">
-                          <img style="height: 200px; width: 200px;" src="{{product.image.url}}" >
+        <div class="row">
+            <div class="col-lg-9 col-md-7">
+                <div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="row">
+                      {% for product in products %}
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                              {% if product.image %}
+                              <a href="{% url 'products:product_detail' product.slug %}">
+                                  <div class="product__discount__item__pic set-bg"
+                                      data-setbg="{{product.image.url}}">
+                                  </div>
+                                </a>
+                              {% endif %}
+
+                                <div class="product__discount__item__text">
+                                    {% if product.category %}
+                                      <span>{{product.category}}</span>
+                                    {% else %}
+                                      <span>No Category Related</span>
+                                    {% endif %}
+                                    <h5><a href="{% url 'products:product_detail' product.slug %}">{{product.name}}</a></h5>
+                                    <div class="product__item__price">
+                                    {{product.text|truncatewords:6}}...etc
+                                    <a href="{% url 'products:product_detail' product.slug %}" 
+                                    class="btn btn-warning btn-sm" style="height: 28px; background: #7ead39;">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {% empty %}
+                      <div class="post-content text-center">
+                        <p>Sorry, No there any Products Yet!</p>
                       </div>
-                    {% endif %}
-                    <div class="post-content">
-                        <a style='text-decoration:none;' href="{% url 'products:product_detail' product.slug %}" class="post-title">{{product.name}}</a>
-                        <p>
-                          {{product.text|truncatewords:6}}
-                          <a href="{% url 'products:product_detail' product.slug %}" class="btn btn-warning btn-sm" style="background: #ed790b;">Read More</a>
-                        </p>
+                    {% endfor %}
                     </div>
                 </div>
             </div>
-          {% empty %}
-            <div class="post-content text-center">
-              <p>Sorry, No there any Products Yet!</p>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
 </section>
 <section>
   {% if product_page.has_next %}

@@ -5,8 +5,14 @@ from .utils import unique_slug_generator
 # Create your models here.
 
 class Category(models.Model):
-    name = models.CharField(max_length=100, unique=True)
+    name = models.CharField(max_length=100)
     slug = models.SlugField(blank=True)
+    parent = models.ForeignKey(
+        'self', 
+        on_delete=models.CASCADE, 
+        related_name="children", 
+        blank=True, null=True
+    )
 
 
     def __str__(self):
@@ -19,10 +25,13 @@ class Product(models.Model):
     slug = models.SlugField(blank=True)
     text = models.TextField(blank=True)
     image = models.ImageField(upload_to="products", blank=True)
-    categories = models.ManyToManyField(Category, related_name='categories', blank=True)
-
-    # bar_code        = models.CharField(max_length=50)
-    # serial_number   = models.CharField(max_length=50)
+    category = models.ForeignKey(
+        Category, 
+        related_name='categories', 
+        on_delete=models.CASCADE, 
+        blank=True, null=True
+    )
+    quantity = models.PositiveIntegerField(default=1)
 
     def __str__(self):
         return self.name
