@@ -1,5 +1,3 @@
-
-
 # pharmarose
 ### Documentation:
 

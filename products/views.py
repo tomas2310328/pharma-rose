@@ -5,6 +5,15 @@ from django.core.paginator import Paginator
 # Create your views here.
 
 
+class SearchProduct(ListView):
+    model = Product
+    template_name = 'products/search.html'
+
+    def get_queryset(self):
+        query = self.request.GET.get("search")
+        object_list = Product.objects.filter(name__icontains=query)
+        return object_list
+
 class ProductListView(ListView):
     model = Product
     template_name = 'products/product_list.html'
