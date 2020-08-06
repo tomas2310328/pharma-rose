@@ -7,7 +7,7 @@
   {% for query in queryset %}
     {% if barcode == query.bar_code and serial == query.serial_number %}
       <p class="alert alert-primary text-center">
-        Your Barcode and Serial Number are Correct
+        Your Barcode and Serial Number are Correct <i class="fa fa-check" aria-hidden="true"></i>
       </p>
       <section class="product-details spad">
         <div class="container">
@@ -36,7 +36,7 @@
       {% if barcode != query.bar_code and serial != query.serial_number %}
         <p class="alert alert-danger text-center">
           WARNING! Your Barcode Or Serial Number
-          <i class="fas fa-times-circle"></i><br>
+          <i class="fa fa-times" aria-hidden="true"></i><br>
           Maybe You Do not Purchase This Product
         </p>
 
