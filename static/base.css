@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  .swiper-container{
+    width:90%;
+    
+  }
+  
+  .swiper-slide{
+    background:#d3d3d3;
+    overflow:hidden;
+  }
+  img{
+    width:100%;
+  }
+  
+  @media (max-width:576px){
+    .swiper-container{
+     
+    }
+  }
+
+
+
+  

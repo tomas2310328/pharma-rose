@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Pharma-Rose | Products{% endblock %}
+
+{% block content %}
+
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-7">
+                <div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Products</h2>
+                    </div>
+                    <div class="row">
+                        {% for product in object_list %}
+                        <div class="col-lg-4">
+                            <div class="product__discount__item">
+                                {% if product.image %}
+                                <a href="{% url 'products:product_detail' product.slug %}">
+                                    <div class="product__discount__item__pic set-bg" data-setbg="{{product.image.url}}">
+                                    </div>
+                                </a>
+                                {% endif %}
+
+                                <div class="product__discount__item__text">
+                                    {% if product.category %}
+                                    <span>{{product.category}}</span>
+                                    {% else %}
+                                    <span>No Category Related</span>
+                                    {% endif %}
+                                    <h5><a href="{% url 'products:product_detail' product.slug %}">{{product.name}}</a>
+                                    </h5>
+                                    <div class="product__item__price">
+                                        {{product.text|truncatewords:6}}...etc
+                                        <a href="{% url 'products:product_detail' product.slug %}"
+                                            class="btn btn-warning btn-sm"
+                                            style="height: 28px; background: #7ead39;">More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% empty %}
+                        <div class="container">
+                            <div class="post-content text-center">
+                                <p>No Products</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+</section>
+
+{% endblock %}
