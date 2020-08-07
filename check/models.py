@@ -26,6 +26,6 @@ def create_checking_for_product(sender, instance, *args, **kwargs):
         for _ in range(difference):
             Checking.objects.create(
                 product=instance, 
-                bar_code=generate_key(10), 
-                serial_number=generate_key(15)
+                bar_code=generate_key(5), 
+                serial_number=generate_key(7)
             )
