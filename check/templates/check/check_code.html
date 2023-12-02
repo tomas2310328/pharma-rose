@@ -7,7 +7,7 @@
   {% for query in queryset %}
     {% if barcode == query.bar_code and serial == query.serial_number %}
       <p class="alert alert-primary text-center">
-        Your Barcode and Serial Number are Correct <i class="fa fa-check" aria-hidden="true"></i>
+        Ваш штрих-код и серийный номер верны <i class="fa fa-check" aria-hidden="true"></i>
       </p>
       <section class="product-details spad">
         <div class="container">
@@ -35,9 +35,9 @@
     {% empty %}
       {% if barcode != query.bar_code and serial != query.serial_number %}
         <p class="alert alert-danger text-center">
-          WARNING! Your Barcode Or Serial Number
+          ПРЕДУПРЕЖДЕНИЕ! Ваш штрих-код или серийный номер
           <i class="fa fa-times" aria-hidden="true"></i><br>
-          Maybe You Do not Purchase This Product
+          Возможно, вы не покупаете этот продукт
         </p>
 
       {% endif %}
@@ -46,7 +46,7 @@
 </div>
 
   <div class="container">
-    <h5 class="text-center my-5">Enter your Barcode &amp; Serial Number To Checking</h5>
+    <h5 class="text-center my-5">Введите свой штрих-код &amp; Серийный номер для проверки </h5>
 
       <form action="." method="get">
 
@@ -64,7 +64,7 @@
 
           <div class="col-sm-3 my-1">
             <button class="btn akame-btn ml-2" type="submit"
-            style="background: #3f2e4f; color: white; font-weight: bold;">Check</button>
+            style="background: #3f2e4f; color: white; font-weight: bold;">Проверять</button>
           </div>
 
         </div>
