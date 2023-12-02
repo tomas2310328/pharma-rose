@@ -7,7 +7,7 @@
   {% for query in queryset %}
     {% if barcode == query.bar_code and serial == query.serial_number %}
       <p class="alert alert-primary text-center">
-        Ваш штрих-код и серийный номер верны <i class="fa fa-check" aria-hidden="true"></i>
+        Your Barcode and Serial Number are Correct <i class="fa fa-check" aria-hidden="true"></i>
       </p>
       <section class="product-details spad">
         <div class="container">
@@ -35,9 +35,9 @@
     {% empty %}
       {% if barcode != query.bar_code and serial != query.serial_number %}
         <p class="alert alert-danger text-center">
-          ПРЕДУПРЕЖДЕНИЕ! Ваш штрих-код или серийный номер
+          WARNING! Your Barcode Or Serial Number
           <i class="fa fa-times" aria-hidden="true"></i><br>
-          Возможно, вы не покупаете этот продукт
+          Maybe You Do not Purchase This Product
         </p>
 
       {% endif %}
@@ -46,7 +46,7 @@
 </div>
 
   <div class="container">
-    <h5 class="text-center my-5">Введите свой штрих-код &amp; Серийный номер для проверки </h5>
+    <h5 class="text-center my-5">Enter your Barcode &amp; Serial Number To Checking</h5>
 
       <form action="." method="get">
 
@@ -54,17 +54,17 @@
 
           <div class="col-sm-3 my-1">
             <input class="form-control" type="search"
-            name="serial" placeholder="ваш серийный номер" required />
+            name="serial" placeholder="your Serial Number" required />
           </div>
 
           <div class="col-sm-3 my-1">
             <input class="form-control" type="search"
-            name="code" placeholder="ваш номер штрих-кода" required />
+            name="code" placeholder="your Barcode Number" required />
           </div>
 
           <div class="col-sm-3 my-1">
             <button class="btn akame-btn ml-2" type="submit"
-            style="background: #3f2e4f; color: white; font-weight: bold;">Проверять</button>
+            style="background: #3f2e4f; color: white; font-weight: bold;">Check</button>
           </div>
 
         </div>
